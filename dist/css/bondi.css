@@ -1,0 +1,30 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header .navbar {
+  background-color: #19283f;
+}
+header .navbar li .active {
+  color: #33d1cc !important;
+}
+header .navbar a {
+  color: white;
+}
+header .navbar a:hover, header .navbar a :visited, header .navbar a :focus {
+  color: #33d1cc;
+}
+
+.btnToggler svg {
+  color: white;
+}
+.btnToggler:focus {
+  box-shadow: none;
+}
+
+.search {
+  border-left: 1px solid #33d1cc;
+}
+.search svg {
+  color: #33d1cc;
+}/*# sourceMappingURL=bondi.css.map */

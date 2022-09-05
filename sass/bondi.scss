@@ -1,0 +1,47 @@
+$link-color : white;
+$hover-color :#33d1cc;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    .navbar {
+        background-color: #19283f;
+
+        & li .active {
+            color: $hover-color !important;
+
+        }
+
+        & a {
+            color: $link-color;
+
+            &:hover , :visited , :focus  {
+                color: $hover-color;
+            }
+        }
+
+    }
+}
+
+.btnToggler{
+    svg {
+        color: $link-color;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.search {
+    border-left: 1px solid $hover-color;
+    
+    svg {
+        color: $hover-color;
+    }
+}
+
+
+

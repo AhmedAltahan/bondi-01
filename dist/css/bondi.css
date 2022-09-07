@@ -18,6 +18,9 @@ header .navbar a:hover, header .navbar a :visited, header .navbar a :focus {
 .btnToggler svg {
   color: white;
 }
+.btnToggler svg:hover {
+  color: #33d1cc;
+}
 .btnToggler:focus {
   box-shadow: none;
 }
@@ -27,4 +30,192 @@ header .navbar a:hover, header .navbar a :visited, header .navbar a :focus {
 }
 .search svg {
   color: #33d1cc;
+}
+
+.landing {
+  background-color: #19283f;
+  min-height: calc(100vh - 70px);
+}
+
+.main-btn {
+  color: #ffc400;
+  background-color: #ff3150;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  color: #ffc400;
+  background-color: #ff3150;
+}
+
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: #33d1cc;
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.basic-align .icon-holder {
+  height: 200px;
+}
+.basic-align .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.basic-align .icon-holder svg.number {
+  height: 12rem;
+  color: #eff7fa;
+}
+.basic-align .icon-holder svg.shape {
+  height: 5rem;
+  color: #33d1cc;
+}
+.basic-align .text-section h4 {
+  color: #ffc400;
+}
+
+.our-work {
+  background-color: #eff7fa;
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.our-work ul li:not(.active):hover {
+  color: #ff3150;
+}
+.our-work ul li.active {
+  background-color: #ff3150;
+  color: #ffc400;
+}
+.our-work .box {
+  padding: 5px;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(51, 209, 204, 0.5137254902);
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+.stuff .stuff-detail {
+  max-width: 550px;
+}
+
+.team {
+  background-color: #eff7fa;
+}
+.team h2 {
+  color: #ffc400;
+}
+.team .team-detail h4 {
+  font-weight: bold;
+  color: #eff7fa;
+  background-color: #33d1cc;
+  padding: 1rem;
+  margin: 0;
+}
+.team .team-detail blockquote {
+  padding: 1rem;
+  background-color: white;
+}
+
+.project {
+  background-color: #19283f;
+}
+.project h2 {
+  color: white;
+}
+
+.form {
+  background-color: #ffc400;
+}
+.form input {
+  border: none;
+  border-bottom: 1px solid #eff7fa;
+}
+.form input::-moz-placeholder {
+  color: #eff7fa;
+  font-weight: bold;
+}
+.form input:-ms-input-placeholder {
+  color: #eff7fa;
+  font-weight: bold;
+}
+.form input::placeholder {
+  color: #eff7fa;
+  font-weight: bold;
+}
+.form button {
+  background-color: #19283f;
+  color: #ffc400;
+  cursor: pointer;
+  border: none;
+}
+.form button:hover {
+  background-color: #19283f;
+  color: #ffc400;
+}
+
+footer {
+  background-color: #19283f;
+}
+footer .copyright span {
+  color: #ffc400;
+}
+footer .copyright > span {
+  color: #33d1cc;
+}
+footer .contact ul svg.facebook {
+  background-color: #1877f2;
+}
+footer .contact ul svg.twitter {
+  background-color: #1da1f2;
+}
+footer .contact ul svg.linkedin {
+  background-color: #0077b5;
+}
+footer .contact ul svg.youtube {
+  background-color: #ff0000;
+}
+
+@media screen and (max-width: 321px) {
+  .form {
+    background-color: #ffc400;
+  }
+  .form input::-moz-placeholder {
+    text-align: center;
+  }
+  .form input:-ms-input-placeholder {
+    text-align: center;
+  }
+  .form input::placeholder {
+    text-align: center;
+  }
+  .links, .contact, .about, .contact ul {
+    padding-top: 20px;
+  }
+  .contact ul {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=bondi.css.map */

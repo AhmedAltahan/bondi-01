@@ -1,5 +1,11 @@
 $link-color : white;
 $hover-color :#33d1cc;
+$hover-colorTwo :#33d1cc83;
+$background-color : #19283f;
+$btn-colors : #ffc400;
+$btn-bg-colors : #ff3150;
+$white-color : #eff7fa ;
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -7,7 +13,7 @@ body {
 
 header {
     .navbar {
-        background-color: #19283f;
+        background-color: $background-color;
 
         & li .active {
             color: $hover-color !important;
@@ -28,11 +34,16 @@ header {
 .btnToggler{
     svg {
         color: $link-color;
+        &:hover {
+            color: $hover-color;
+    
+        }
     }
 
     &:focus {
         box-shadow: none;
     }
+    
 }
 
 .search {
@@ -43,5 +54,231 @@ header {
     }
 }
 
+.landing {
+    background-color: $background-color;
+    min-height: calc(100vh - 70px);
+}
+
+.main-btn {
+    color:$btn-colors;
+    background-color: #ff3150;
+    border: none;
+    padding: 0.5rem 1rem;
+    
+    &:hover {
+        color:$btn-colors;
+        background-color: #ff3150;
+    }
+}
+
+// Start design section Features
+
+.main-title {
+
+    &::after {
+        content: "";
+        width: 120px;
+        height: 2px;
+        background-color: $hover-color;
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+}
+
+.basic-align {
+    .icon-holder {
+        height: 200px;
+        svg {
+            left: 50%;
+            transform: translateX(-50%);
+            &.number  {
+                height: 12rem;
+                color: $white-color;
+            }
+            &.shape {
+                height: 5rem;
+                color: $hover-color ;
+            }
+        }
+    }
+
+    .text-section {
+        h4 {
+            color: $btn-colors;
+        }
+    }
+}
 
 
+// End design section Features
+
+.our-work {
+    background-color: $white-color;
+
+    ul li {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        &:not(.active):hover {
+            color: $btn-bg-colors;
+        }
+        &.active {
+            background-color: $btn-bg-colors;
+            color: $btn-colors;
+        }
+    }
+
+    .box {
+        padding: 5px;
+        background-color: white;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: attr(data-work);
+            position: absolute;
+            height: calc(100% - 10px);
+            width: calc(100% - 10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 18px;
+            color: white;
+            background-color: $hover-colorTwo;
+            transition: 0.3s;
+            transform: translateX(calc(-100% - 5px));
+
+        }
+        &:hover::before {
+            transform: translateX(0);
+        }
+    }
+}
+
+.stuff {
+    .stuff-detail {
+        max-width: 550px;
+    }
+}
+
+.team {
+    background-color:$white-color ;
+
+    h2 {
+        color: $btn-colors;
+    }
+
+    .team-detail {
+
+        h4 {
+            font-weight: bold;
+            color: $white-color;
+            background-color: $hover-color;
+            padding: 1rem;
+            margin: 0;
+        }
+        blockquote {
+            padding: 1rem;
+            background-color:white;
+        }
+    }
+}
+
+.project {
+    background-color: $background-color;
+    h2 {
+        color: white;
+    }
+}
+
+.form {
+    background-color: $btn-colors ;
+
+    input {
+        border: none;
+        border-bottom: 1px solid $white-color;
+        &::placeholder {
+            color: $white-color;
+            font-weight: bold;
+        }
+    }
+
+    button {
+        background-color: $background-color;
+        color: $btn-colors;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: $background-color;
+            color: $btn-colors;    
+        }
+
+    }
+}
+
+footer {
+    background-color: $background-color;
+
+    .copyright {
+        span {
+            color: $btn-colors;
+        }
+        > span {
+            color: $hover-color;
+        }
+    }
+
+    .contact {
+        ul {
+            svg {
+                &.facebook {
+                    background-color: #1877f2;
+                }
+                &.twitter {
+                    background-color: #1da1f2;
+                }
+                &.linkedin {
+                    background-color: #0077b5;
+                }
+                &.youtube {
+                    background-color: #ff0000;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:321px) {
+    .form {
+        background-color: $btn-colors ;
+    
+        input {
+            
+            &::placeholder {
+                text-align: center;
+            }
+        }
+    }
+
+    .links , .contact , .about , .contact ul {
+        padding-top: 20px;
+    }
+
+    .contact ul {
+        justify-content: center;
+    }
+
+
+
+    
+}
